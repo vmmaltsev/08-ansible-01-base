@@ -1,13 +1,22 @@
 ---
-  el:
-    hosts:
-      my_centos7_container:
-        ansible_connection: docker
-  deb:
-    hosts:
-      my_ubuntu_container:
-        ansible_connection: docker
-  local:
-    hosts:
-      localhost:
-        ansible_connection: local
+el:
+  hosts:
+    my_centos7_container:
+      ansible_connection: docker
+
+deb:
+  hosts:
+    my_ubuntu_container:
+      ansible_connection: docker
+      ansible_python_interpreter: /usr/bin/python3
+
+local:
+  hosts:
+    localhost:
+      ansible_connection: local
+
+fedora:
+  hosts:
+    fedora_container:
+      ansible_connection: docker
+
